@@ -3,18 +3,12 @@
 #   Created: 2019-10-01
 
 
-
-
-
-
-
-
 def main():
 
     # Getting user's first and last name
 
     first= input ("Enter your first name: ")
-    last= input ("Enter your first name: ")
+    last= input ("Enter your last name: ")
 
     # Generating a Marist-style username
     
