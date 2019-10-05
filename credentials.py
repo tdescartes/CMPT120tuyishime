@@ -3,15 +3,14 @@
 #   Created: 2019-10-01
 
 
-
-
 #This fucntion is for gathering names.
 
 def getnames():
-
-        first= input ("Enter your first name: ")
-        last= input ("Enter your last name: ")
-        return (first + " "+last)
+    
+    first= input ("Enter your first name: ")
+    last= input ("Enter your last name: ")
+    str=(first + " "+last)
+    return str
 
 # This function is for creating Marist Style username in lowercase
 def maristyle(fulname):
@@ -50,18 +49,15 @@ def iStrong(passwd):
 
 
 def main():
-    
+
+   
     
     names=getnames()
-    usrname= maristyle(names)
-
+    usrname= maristyle(names) 
     passwrd= getpaswd()
 
     print (" Full name: ", names)
-
     print (" Your password: ", passwrd)
-
-
     print("Account configured. Your new email address is", usrname+ "@marist.edu")
 
 
