@@ -13,11 +13,11 @@ def getnames():
         last= input ("Enter your last name: ")
         return (first + " "+last)
 
-# This function is for creating Marist Style username
+# This function is for creating Marist Style username in lowercase
 def maristyle(fulname):
 
     first,last=fulname.split(" ")
-    username= first+"."+ last
+    username= first.lower()+"."+ last.lower()
 
     return username
 
@@ -27,16 +27,26 @@ def getpaswd():
 
     passwd= input ("Create a new password: ")
 
-    while (len(passwd)<8):
+    iStrong(passwd)
+    while (iStrong(passwd)== False):
         print ("Fool of a Took! That password is feeble!")
         passwd= input ("Create a new password: ")
+        iStrong(passwd)  
     else:
         print ("The force is strong in this one")
         return (passwd)
 
 
-# Creating a function that builds a Marist 
-
+#The function that test the strenth of the password from the user
+    
+def iStrong(passwd):
+    if len(passwd)<8:
+        return False
+    elif passwd.lower()== passwd:
+        return False
+    elif passwd.upper()== passwd:
+        return False
+    
 
 
 def main():
