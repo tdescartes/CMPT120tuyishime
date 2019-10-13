@@ -31,9 +31,9 @@ def getpaswd():
         print ("Fool of a Took! That password is feeble!")
         passwd= input ("Create a new password: ")
         iStrong(passwd)  
-    else:
-        print ("The force is strong in this one")
-        return (passwd)
+#    else:
+    print ("The force is strong in this one")
+    return (passwd)
 
 
 #The function that test the strenth of the password from the user
