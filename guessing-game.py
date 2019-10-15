@@ -4,6 +4,7 @@
 
 
 def main():
+    
     myanswer= "Lion"
 
     guess= input ("Think of an animal, guess what it is: ")
@@ -19,7 +20,7 @@ def main():
         else:
             break
 
-    print ("Congratulation!! You finally managed to get it correct!")
+    print ("Congratulation!! You finally got it correct!")
 
 
 main()
