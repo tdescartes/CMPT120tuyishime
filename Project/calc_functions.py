@@ -10,31 +10,35 @@ def main():
 
     # The look to search and use operator
     while length > 1:
-        if "*" in mylist:
-            temp= float (mylist[length-1]) * float (mylist[length+1])
-            mylist[i]= temp
-            del mylist[length-1]
-            del mylist[length+1]
+        if "/" in mylist:
+            index= mylist.index("/")
+            temp= float (mylist[index-1]) / float (mylist[index+1])
+            mylist[index]= temp
+            del mylist[index-1]
+            del mylist[index]
             
-        elif "/" in mylist:
-            temp= float (mylist[length-1]) / float (mylist[length+1])
-            mylist[i]= temp
-            del mylist[length-1]
-            del mylist[length+1]
+        elif "*" in mylist:
+            index= mylist.index("*")
+            temp= float (mylist[index-1]) * float (mylist[index+1])
+            mylist[index]= temp
+            del mylist[index-1]
+            del mylist[index]
 
         elif "+" in mylist:
-            temp= float (mylist[length-1]) + float (mylist[length+1])
-            mylist[i]= temp
-            del mylist[length-1]
-            del mylist[length+1]
+            index= mylist.index("+")
+            temp= float (mylist[index-1]) + float (mylist[index+1])
+            mylist[index]= temp
+            del mylist[index-1]
+            del mylist[index]
 
         elif "-" in mylist:
-            temp= float (mylist[length-1]) - float (mylist[length+1])
-            mylist[i]= temp
-            del mylist[length-1]
-            del mylist[length+1]
+            index= mylist.index("-")
+            temp= float (mylist[index-1]) - float (mylist[index+1])
+            mylist[index]= temp
+            del mylist[index-1]
+            del mylist[index]
             
-        length= len (length)
+        length= len(mylist)
 
     print ("The results is", mylist[0] )
 
