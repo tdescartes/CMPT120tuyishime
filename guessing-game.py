@@ -7,7 +7,7 @@ def main():
     
     myanswer= "Lion"
 
-    guess= (input ("Think of an animal, guess what it is: ")).lower()
+    guess= (input ("I am thinking of an animal, guess what it is: ")).lower()
 
     while True:
 
@@ -23,6 +23,17 @@ def main():
 
         else:
             print ("Congratulation!! You finally got it correct!")
+
+            prefer= input("Do you like it? (Y/N)")
+
+            if (prefer.lower() == "y"):
+
+                print ("Today is your happy day!")
+
+            else:
+                 print("Sorry! That's sad to hear!")
+
+
             
             break
 
