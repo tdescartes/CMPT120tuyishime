@@ -1,5 +1,5 @@
 # CMPT 120 Intro to Programming
-# Project #2 – Calculator
+# Project #2 – Guessing game
 # Created: 2019-10-17
 
 
