@@ -56,7 +56,9 @@ def main():
         printBoard(board)
         row,col = getPlayerMove()
         markBoard(board,row,col,player)
-        player = player % 2 + 1 # switch player for next turn
+        player = player % 2 + 1
+
+    printBoard(board)
 
 
 main()
