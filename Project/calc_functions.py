@@ -2,48 +2,51 @@
 # Project #1 – Calculator Vo1
 # Created: 2019-10-15
 
-# JA: Move the main() function to calculate.py
-def main():
-
-    string1= input ("Enter you calculation: ")
+def calculate(string1):
+    
     mylist= string1.split(" ")
     length= len(mylist)
-    print(solve(mylist))
+    
+# Added a case for length of mylist equal to 1
+    if length == 1:
+        temp= float (mylist[0])
+        mylist[0]= temp
+        return mylist[0]
 
-def solve(mylist):
+    else: 
+    
+
     # The look to search and use operator
-    while length > 1:
-        if "/" in mylist:
-            index= mylist.index("/")
-            temp= float (mylist[index-1]) / float (mylist[index+1])
-            mylist[index]= temp
-            del mylist[index-1]
-            del mylist[index]
+        while length > 1:
+            if "/" in mylist:
+                index= mylist.index("/")
+                temp= float (mylist[index-1]) / float (mylist[index+1])
+                mylist[index]= temp
+                del mylist[index-1]
+                del mylist[index]
             
-        elif "*" in mylist:
-            index= mylist.index("*")
-            temp= float (mylist[index-1]) * float (mylist[index+1])
-            mylist[index]= temp
-            del mylist[index-1]
-            del mylist[index]
+            elif "*" in mylist:
+                index= mylist.index("*")
+                temp= float (mylist[index-1]) * float (mylist[index+1])
+                mylist[index]= temp
+                del mylist[index-1]
+                del mylist[index]
 
-        elif "+" in mylist:
-            index= mylist.index("+")
-            temp= float (mylist[index-1]) + float (mylist[index+1])
-            mylist[index]= temp
-            del mylist[index-1]
-            del mylist[index]
+            elif "+" in mylist:
+                index= mylist.index("+")
+                temp= float (mylist[index-1]) + float (mylist[index+1])
+                mylist[index]= temp
+                del mylist[index-1]
+                del mylist[index]
 
-        elif "-" in mylist:
-            index= mylist.index("-")
-            temp= float (mylist[index-1]) - float (mylist[index+1])
-            mylist[index]= temp
-            del mylist[index-1]
-            del mylist[index]
+            elif "-" in mylist:
+                index= mylist.index("-")
+                temp= float (mylist[index-1]) - float (mylist[index+1])
+                mylist[index]= temp
+                del mylist[index-1]
+                del mylist[index]
             
-        length= len(mylist)
+            length= len(mylist)
+        
+        return mylist[0]
 
-#    print ("The results is", mylist[0] )
-
-
-main()
