@@ -14,7 +14,6 @@ def calculate(string1):
         return mylist[0]
 
     else: 
-    
 
     # The look to search and use operator
         while length > 1:
