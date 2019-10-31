@@ -5,8 +5,6 @@
 from graphics import*
 from calc_functions import calculate
 
-
-
 def main():
     
     win= GraphWin("Simple calculator",230, 360)
