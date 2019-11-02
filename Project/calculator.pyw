@@ -203,49 +203,40 @@ def main():
     output.draw(win)
     output.setSize(18)
     
-
+    #the following are going to be about making this functionality work
+    
     while True:
-        mouse = win.getMouse()
-        #column1
+        mouse = win.getMouse()   # getting where the user clicks
+
+        # selecting the x and y coordinates that matches the buttons
+        
+        #selecting buttons by column1
         if 20 < mouse.x < 60 and 100 < mouse.y < 140:
             equation= equation + "7"
             output.setText(equation)
         
-        elif 20 < mouse.x < 60 and 150 < mouse.y < 190:
+        if 20 < mouse.x < 60 and 150 < mouse.y < 190:
             equation= equation + "4"
             output.setText(equation)
             
-        elif 20 < mouse.x < 60 and 200 < mouse.y < 240:
+        if 20 < mouse.x < 60 and 200 < mouse.y < 240:
             equation= equation + "1"
             output.setText(equation)
+    
+        if 20 < mouse.x < 60 and 250 < mouse.y < 290:
 
-        elif 20 < mouse.x < 60 and 250 < mouse.y < 290:
-            '''
-            if equation[len(equation)-2] == "-":
-
-                anotherstring= equation[:len(equation)-2]+ equation[len(equation)-1]
-                equation= ""
-                equatioin= equation + anotherstring
-
-            else:
-                equation[len(equation)-2]!= "-"
-                
-                anotherstring= equation[:len(equation)-2]+ "-" + equation[len(equation)-1]
-                equation= ""
-                equatioin= equation + anotherstring
-                
-            output.setText(equation)
+            mylist= equation.split(" ")
+            temp= float (mylist[len(mylist)-1])
+            temp= temp * -1
+            mylist[len(mylist)-1]= str(temp)
+            equation=""
             
-            '''
-            
-            solution= calculate(equation)
-            solution= solution * -1
-
-            equation= ""
-            equation= str(solution)
-
+            for i in mylist:
+                
+                equation= equation + " "+ str(i)
+        
             output.setText(equation)
-   
+
         #column2
         
         if 70 < mouse.x < 110 and 100 < mouse.y < 140:
@@ -314,5 +305,4 @@ def main():
             equation= ""
             equation= equation + str(final)
 
-        
 main()

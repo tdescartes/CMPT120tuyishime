@@ -40,12 +40,24 @@ def calculate(string1):
 
             elif "-" in mylist:
                 index= mylist.index("-")
-                temp= float (mylist[index-1]) - float (mylist[index+1])
-                mylist[index]= temp
-                del mylist[index-1]
-                del mylist[index]
+                if mylist[index]== "-":
+                    index= mylist.index("-")
+                    temp= float (mylist[index-1]) - float (mylist[index+1])
+                    mylist[index]= temp
+                    del mylist[index-1]
+                    del mylist[index]
+                else:
+                    continue
             
             length= len(mylist)
         
         return mylist[0]
+
+
+
+
+
+
+
+    
 
