@@ -7,12 +7,12 @@ from calc_functions import calculate
 
 def main():
     
-    win= GraphWin("Simple calculator",230, 360)
+    win= GraphWin("Simple calculator",280, 360)
     win.setBackground("dark blue")
     
     #Draw the interface
     
-    screen=Rectangle(Point(16,20), Point(214,80))
+    screen=Rectangle(Point(16,20), Point(260,80))
     screen.draw(win)
     screen.setFill('light cyan')
 
@@ -70,9 +70,7 @@ def main():
     dot.draw(win)
     dot.setFill('orange')
 
-    delete=Rectangle( Point(120,300), Point(160,340))
-    delete.draw(win)
-    delete.setFill('orange')
+
 
     #column four
 
@@ -92,9 +90,32 @@ def main():
     substraction.draw(win)
     substraction.setFill('orange')
 
-    equality=Rectangle( Point(170,300), Point(210,340))
+    delete=Rectangle( Point(170,300), Point(210,340))
+    delete.draw(win)
+    delete.setFill('orange')
+
+    #column five
+
+    division=Rectangle( Point(220,100), Point(260,140))
+    division.draw(win)
+    division.setFill('orange')
+    
+    multiplication=Rectangle( Point(220,150), Point(260,190))
+    multiplication.draw(win)
+    multiplication.setFill('orange')
+    
+    addition=Rectangle( Point(220,200), Point(260,240))
+    addition.draw(win)
+    addition.setFill('orange')
+
+    substraction=Rectangle( Point(220,250), Point(260,290))
+    substraction.draw(win)
+    substraction.setFill('orange')
+    
+    equality=Rectangle( Point(220,300), Point(260,340))
     equality.draw(win)
     equality.setFill('orange')
+
 
     #Creating buttons for messages
     # column one button
@@ -164,11 +185,6 @@ def main():
     buttondot.setTextColor("white")
     buttondot.setSize(18)
 
-    buttondelete=Text( Point(140,320), "Del")
-    buttondelete.draw(win)
-    buttondelete.setTextColor("white")
-    buttondelete.setSize(18)
-
     #column four button
 
     buttondivision=Text( Point(190,120), "/")
@@ -191,7 +207,34 @@ def main():
     buttonsubstraction.setTextColor("white")
     buttonsubstraction.setSize(18)
 
-    buttonequality=Text( Point(190,320), "=")
+    buttondelete=Text( Point(190,320), "Del")
+    buttondelete.draw(win)
+    buttondelete.setTextColor("white")
+    buttondelete.setSize(18)
+
+    # column five button
+
+    buttonnine=Text( Point(240,120), "M+")
+    buttonnine.draw(win)
+    buttonnine.setTextColor("white")
+    buttonnine.setSize(18)
+    
+    buttonsix=Text( Point(240,170), "M-")
+    buttonsix.draw(win)
+    buttonsix.setTextColor("white")
+    buttonsix.setSize(18)
+    
+    buttonthree=Text( Point(240,220), "MR")
+    buttonthree.draw(win)
+    buttonthree.setTextColor("white")
+    buttonthree.setSize(18)
+
+    buttondot=Text( Point(240,270), "MC")
+    buttondot.draw(win)
+    buttondot.setTextColor("white")
+    buttondot.setSize(18)
+
+    buttonequality=Text( Point(240,320), "=")
     buttonequality.draw(win)
     buttonequality.setTextColor("white")
     buttonequality.setSize(18)
@@ -202,6 +245,11 @@ def main():
     output=Text( Point(115,50), "")
     output.draw(win)
     output.setSize(18)
+
+
+
+
+
     
     #the following are going to be about making this functionality work
     
@@ -273,11 +321,6 @@ def main():
             equation= equation + "."
             output.setText(equation)
 
-        if 120< mouse.x < 160 and 300 < mouse.y < 340:
-            equation= equation[:len(equation)-1]
-            output.setText(equation)
-            #equation= ""
-            #output.setText(equation)
 
         #column4
 
@@ -296,10 +339,36 @@ def main():
         if 170 < mouse.x < 210 and 250 < mouse.y < 290:
             equation= equation + " - "
             output.setText(equation)
+
+        if 170 < mouse.x < 210 and 300 < mouse.y < 340:
+            equation= equation[:len(equation)-1]
+            output.setText(equation)
+            #equation= ""
+            #output.setText(equation)
+
+
+        #column5
+
+        if 220 < mouse.x < 260 and 100 < mouse.y < 140:
+            equation= equation + " / "
+            output.setText(equation)
+            
+        if 220 < mouse.x < 260 and 150 < mouse.y < 190:
+            equation= equation + " * "
+            output.setText(equation)
+            
+        if 220 < mouse.x < 260 and 200 < mouse.y < 240:
+            equation= equation + " + "
+            output.setText(equation)
+            
+        if 220 < mouse.x < 260 and 250 < mouse.y < 290:
+            equation= equation + " - "
+            output.setText(equation)
+
         
         #  for equal
         
-        if 170 < mouse.x < 210 and 300 < mouse.y < 340:
+        if 220 < mouse.x < 260 and 300 < mouse.y < 340:
             final=calculate(equation)
             output.setText(final)
             equation= ""
