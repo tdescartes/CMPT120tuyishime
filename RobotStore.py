@@ -3,7 +3,6 @@
 # Author: Descartes Tuyishime
 # Created: 2019-Nov-12
 
-
 productNames = [ "Ultrasonic range finder"
  , "Servo motor"
  , "Servo controller"
