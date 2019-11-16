@@ -98,23 +98,23 @@ def main():
 
     division=Rectangle( Point(220,100), Point(260,140))
     division.draw(win)
-    division.setFill('orange')
+    division.setFill('gray')
     
     multiplication=Rectangle( Point(220,150), Point(260,190))
     multiplication.draw(win)
-    multiplication.setFill('orange')
+    multiplication.setFill('gray')
     
     addition=Rectangle( Point(220,200), Point(260,240))
     addition.draw(win)
-    addition.setFill('orange')
+    addition.setFill('gray')
 
     substraction=Rectangle( Point(220,250), Point(260,290))
     substraction.draw(win)
-    substraction.setFill('orange')
+    substraction.setFill('gray')
     
     equality=Rectangle( Point(220,300), Point(260,340))
     equality.draw(win)
-    equality.setFill('orange')
+    equality.setFill('Green')
 
 
     #Creating buttons for messages
@@ -348,23 +348,20 @@ def main():
 
 
         #column5
-
         if 220 < mouse.x < 260 and 100 < mouse.y < 140:
-            equation= equation + " / "
+            memory=calculate(equation)
             output.setText(equation)
             
         if 220 < mouse.x < 260 and 150 < mouse.y < 190:
-            equation= equation + " * "
-            output.setText(equation)
+             memory=calculate(equation)
+             output.setText(equation)
             
         if 220 < mouse.x < 260 and 200 < mouse.y < 240:
-            equation= equation + " + "
             output.setText(equation)
             
         if 220 < mouse.x < 260 and 250 < mouse.y < 290:
-            equation= equation + " - "
+            memory=""
             output.setText(equation)
-
         
         #  for equal
         
@@ -373,5 +370,5 @@ def main():
             output.setText(final)
             equation= ""
             equation= equation + str(final)
-
+            memory
 main()
