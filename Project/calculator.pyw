@@ -5,9 +5,20 @@
 from graphics import*
 from calc_functions import calculate
 
+
+'''
+
+def memory( result,n):
+    if (n==0):
+        memory=0
+    if (n==1) :
+        memory=results
+'''      
+        
+
 def main():
     
-    win= GraphWin("Simple calculator",280, 360)
+    win= GraphWin("Calculator",280, 360)
     win.setBackground("dark blue")
     
     #Draw the interface
@@ -247,10 +258,6 @@ def main():
     output.setSize(18)
 
 
-
-
-
-    
     #the following are going to be about making this functionality work
     
     while True:

@@ -53,11 +53,3 @@ def calculate(string1):
         
         return mylist[0]
 
-
-
-
-
-
-
-    
-
