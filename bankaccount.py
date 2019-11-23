@@ -3,7 +3,6 @@
 # Author: Descartes Tuyishime
 # Date: 11-19-2019 
 
-
 def main():
     account= BankAccount("pin")
     account.get_balance("pin")
