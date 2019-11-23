@@ -3,7 +3,6 @@
 # Author: Descartes Tuyishime
 # Date: 11-19-2019 
 
-
 def main():
     my_counter = Counter()
     my_counter.get_value()
@@ -23,36 +22,42 @@ class Counter:
     def get_value(self): 
         return self.count
 
+           
+class DecrementingCounter:
+    """Simple counter that can be incremented, decremented, and cleared."""
+    def __init__(self):
+        """Initialize counter to 0."""
+        self.count = 0
+    def increment(self):
+        """Increment counter by 1."""
+        self.count += 1
+    def decrement(self):
+        """Decrement counter by 1."""
+        self.count -= 1
+    def clear(self):
+        """Clear counter to 0."""
+        self.count = 0
+    def get_value(self):
+        """Return the current value of the counter."""
+        return self.count
 
 
+class DecrementingCounter2(Counter):
+    """Simple counter that can be incremented, decremented, and cleared."""
+    def decrement(self):
+        """Decrement counter by 1."""
+        self.count -= 1
 
-class BankAccount:
-    """Bank Account protected by a pin number."""
-    def __init__(self, pin):
-        """Initial account balance is 0 and pin is 'pin'."""
-        self.balance=0
-        self.pin="pin"
-    def deposit(self, pin, amount):
-        """Increment account balance by amount and return new balance."""
-        if(self.pin== pin):
-            self.balance= self.balance + amount
-            return self.balance
-    def withdraw(self, pin, amount):
-        """Decrement account balance by amount and return amount withdrawn."""
-        if(self.pin== pin):
-            self.balance= self.balance - amount
-            return (amount)
-        
-    def get_balance(self, pin):
-        """Return account balance."""
-        if(self.pin== pin):
-            return self.balance
+    
+class DecrementingCounter2(Counter):
+    """Simple counter that can be incremented, decremented, and cleared."""
+    def increment(self):
+        """Increment counter by 2."""
+        self.count += 2
+    def decrement(self):
+        """Decrement counter by 1."""
+        self.count -= 1
 
-        
-    def change_pin(self, oldpin, newpin):
-        """Change pin from oldpin to newpin."""
-        if(self.pin== oldpin):
-            self.pin= newpin
 
 
 main()   
