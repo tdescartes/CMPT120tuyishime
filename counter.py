@@ -3,16 +3,6 @@
 # Author: Descartes Tuyishime
 # Date: 11-19-2019 
 
-class Counter:
-    def __init__(self):
-        self.count = 0
-    def increment(self):
-        self.count += 1
-    def clear(self):
-        self.count = 0
-    def get_value(self):
-        return self.count
-
 
 def main():
     my_counter = Counter()
@@ -22,6 +12,18 @@ def main():
     my_counter.get_value() 
     my_counter.clear()
     my_counter.get_value()
+
+class Counter:
+    def __init__(self):
+        self.count = 0
+    def increment(self): # increasing the value of the count
+        self.count += 1
+    def clear(self):
+        self.count = 0
+    def get_value(self): 
+        return self.count
+
+
 
 
 class BankAccount:

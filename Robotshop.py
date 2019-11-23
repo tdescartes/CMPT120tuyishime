@@ -3,7 +3,7 @@
 # Author: Descartes Tuyishime
 # Created: 2019-Nov-12
 
-
+# JA: Always remember to add comments to your code
 
 
 class Product:

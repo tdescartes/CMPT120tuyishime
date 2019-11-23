@@ -2,6 +2,7 @@
 # Project #2 – Calculator Graphics
 # Created: 2019-10-17
 
+# JA: Your memory functions don't seem to be working properly
 from graphics import*
 from calc_functions import calculate
 
